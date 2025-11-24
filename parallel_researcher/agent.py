@@ -2,6 +2,7 @@ from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent
 from google.genai import types
 from google.adk.models.google_llm import Gemini
 from google.adk.runners import InMemoryRunner
+from google.adk.plugins.logging_plugin import (LoggingPlugin,)
 from google.adk.tools import AgentTool, FunctionTool, google_search
 
 retry_config = types.HttpRetryOptions(
@@ -73,4 +74,9 @@ parallel_researcher = ParallelAgent(
 root_agent = SequentialAgent(
     name = 'ResearchSystem',
     sub_agents = [parallel_researcher, aggregator_agent],
+)
+
+runner = InMemoryRunner(
+    agent = root_agent,
+    plugins = [LoggingPlugin()]
 )
