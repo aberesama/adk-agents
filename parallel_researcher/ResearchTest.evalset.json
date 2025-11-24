@@ -1,0 +1,64 @@
+{
+  "eval_set_id": "ResearchTest",
+  "name": "ResearchTest",
+  "eval_cases": [
+    {
+      "eval_id": "basic_research",
+      "conversation": [
+        {
+          "invocation_id": "e-dc6b6f5d-fc33-4267-8864-0a372ff71105",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what do i need to know today?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Today's global overview reveals a striking dichotomy between rapid scientific and technological advancement and persistent geopolitical instability. Artificial intelligence is a dominant force, accelerating beyond generative AI for business workflows and agentic task automation to profoundly impact healthcare.\n\nA key theme emerging from both technology and health sectors is AI's revolutionary role in drug discovery. It is dramatically shortening development timelines from years to months, with AI-designed drugs already entering clinical trials. This complements other significant medical breakthroughs, including the first FDA-approved CRISPR gene editing therapy and promising personalized cancer vaccines, all rapidly moving towards widespread clinical application.\n\nHowever, this era of unprecedented innovation unfolds amidst global volatility. Geopolitical conflicts continue, marked by ongoing disputes and regional crises, while international diplomacy navigates disagreements. Financially, global markets show cautious optimism, with US equities advancing on interest rate cut signals and Indian markets anticipating stability, yet gold prices reflect underlying economic uncertainty. The rapid deployment of powerful AI also underscores the critical need for ethical considerations and robust regulatory frameworks to ensure responsible progress."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1763959686.565549
+        },
+        {
+          "invocation_id": "e-3a0d5965-88a9-42b2-8989-775dd423b0b9",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Will quantum computing break cryptography?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Yes, quantum computing has the potential to break many of the cryptographic methods currently in use. This is a significant concern for cybersecurity professionals and governments worldwide.\n\nHere's a breakdown of what you need to know:\n\n**Why Quantum Computers Threaten Current Cryptography:**\n*   **Shor's Algorithm:** Developed by Peter Shor, this quantum algorithm can efficiently factor large numbers and solve discrete logarithms. These mathematical problems are the foundation of widely used public-key encryption schemes like RSA and Elliptic Curve Cryptography (ECC). A sufficiently powerful quantum computer could potentially break these encryptions in minutes or hours, rather than the thousands or billions of years it would take classical computers.\n*   **Grover's Algorithm:** While not as devastating as Shor's algorithm for public-key cryptography, Grover's algorithm could speed up attacks on symmetric encryption methods like AES, though it would likely require larger key sizes to maintain security rather than completely breaking them.\n\n**The \"Harvest Now, Decrypt Later\" Threat:**\n*   Even though large-scale quantum computers aren't widely available yet, adversaries can \"harvest\" currently encrypted data now and store it. Once powerful quantum computers exist, they could then decrypt this previously captured data, exposing sensitive information that was thought to be secure. This concept is known as \"harvest now, decrypt later\" (HNDL).\n\n**Current Status and Future Outlook:**\n*   **Not Imminent, but Real:** The threat is real, but a quantum computer capable of breaking common encryption schemes is still years, if not decades, away. However, the cryptographic community is actively working on solutions.\n*   **Post-Quantum Cryptography (PQC):** This is a field dedicated to developing new cryptographic algorithms that are secure against attacks from both classical and quantum computers. These algorithms are based on different mathematical problems that are believed to be difficult for quantum computers to solve.\n*   **Standardization Efforts:** Organizations like the National Institute of Standards and Technology (NIST) are actively involved in standardizing post-quantum cryptographic algorithms. Some of the algorithms announced for standardization include ML-KEM (KEM), ML-DSA (signatures), SLH-DSA (signatures), and Classic McEliece (KEM).\n*   **Migration is Key:** The goal is to transition to these new quantum-resistant algorithms before quantum computers become powerful enough to pose a significant threat to current encryption. This migration presents challenges, especially for resource-constrained embedded devices."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1763959867.134808
+        }
+      ],
+      "session_input": {
+        "app_name": "parallel_researcher",
+        "user_id": "user",
+        "state": {
+          "tech_research": "",
+          "health_research": "",
+          "finance_research": ""
+        }
+      },
+      "creation_timestamp": 1763959909.2668054
+    }
+  ],
+  "creation_timestamp": 1763959753.1800475
+}
